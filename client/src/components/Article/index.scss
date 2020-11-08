@@ -1,0 +1,45 @@
+@import '../../root-colors.scss';
+
+.title-wrapper {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primaryColor;
+  }
+}
+
+.description-wrapper {
+  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 5px 0;
+  text-align: justify;
+  color: #7f7f7f;
+}
+
+small {
+  color: #7f7f7f;
+}
+
+button {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background: $primaryColor;
+  border-radius: 10px;
+  width: 300px;
+  height: 35px;
+  position: relative;
+  left: 65%;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  }
+}

@@ -1,0 +1,111 @@
+@import '../../root-colors.scss';
+
+.article-wrapper {
+  width: 40vw;
+  height: 80vh;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  position: relative;
+  margin: 0 auto;
+  padding: 25px;
+  top: 120px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.favorites-wrapper {
+  width: 40vw;
+  height: 100vh;
+  margin-left: 35px;
+}
+
+.search-box {
+  position: absolute;
+  top: 75px;
+  transform: translate(-50%, -50%);
+  background: $primaryColor;
+  height: 60px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search-box:hover > .search-text {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+  background: #fff;
+  color: $primaryColor;
+}
+
+.search-btn {
+  color: #fff;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $primaryColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  font-family: 'Ubuntu', sans-serif;
+
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+.select-wrapper {
+  position: absolute;
+  left: 9%;
+  top: 50px;
+
+  select {
+    font-size: 1.2rem;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border: 1px solid $primaryColor;
+    border-radius: 10px;
+    color: #fff;
+    background: $primaryColor;
+    font-family: 'Ubuntu', sans-serif;
+    text-align-last: center;
+    cursor: pointer;
+
+    option {
+      padding-left: 30px;
+    }
+  }
+}
+
+.favorites-list {
+  p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    position: absolute;
+    right: 23%;
+    color: $primaryColor;
+    top: 5%;
+  }
+}
