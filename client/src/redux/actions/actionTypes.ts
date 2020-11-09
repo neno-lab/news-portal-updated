@@ -1,7 +1,6 @@
 export const NEWS_LOAD_SUCCESS='NEWS_LOAD_SUCCESS';
 export const CATEGORY_NEWS_SUCCESS='CATEGORY_NEWS_SUCCESS';
 export const ARTICLE_NEWS_SUCCESS='ARTICLE_NEWS_SUCCESS';
-export const ADD_FAVORITES='ADD_FAVORITES';
 
 export interface NewsSuccess{
     type: typeof NEWS_LOAD_SUCCESS;
@@ -18,10 +17,5 @@ export interface ArticleNews{
     articleNews: any;
 }
 
-export interface FavoritesNews{
-    type: typeof ADD_FAVORITES;
-    favoritesNews: [];
-}
-
-export type NewsActionTypes = NewsSuccess | CategoryNews | ArticleNews | FavoritesNews;
+export type NewsActionTypes = NewsSuccess | CategoryNews | ArticleNews;
 export type AppActions = NewsActionTypes; // all possible redux actions 

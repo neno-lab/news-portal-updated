@@ -18,7 +18,7 @@ class ArticlePage extends React.Component<Props, ArticlePageState> {
         return (
         <>
             <div className='main-div'>
-                <div className='title' onClick={()=>history.push('/')}>{news.title}</div>
+                <div className='title' onClick={()=>history.push('/')}>{news.title}</div> {/* It gives me an error! */} {/* TypeError: this.props.news.filter is not a function */}
                 <div>
                     <img src={news.urlToImage} alt="article"/>
                     <span>

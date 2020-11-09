@@ -18,7 +18,7 @@ const Article = ({article, setFavorites, addArticle, deleteBtn, removeFavorites}
             </div>
             <div className='description-wrapper'>{article.description}</div>
             <div style={{position: 'absolute', marginTop:'20px'}}>
-            {deleteBtn ? <button onClick={() => removeFavorites(article)}>Remove</button> : <button onClick={() => setFavorites(article)}>Add To Favorites</button>}
+            {deleteBtn ? <button onClick={() => removeFavorites(article)}>Remove From Favorites</button> : <button onClick={() => setFavorites(article)}>Add To Favorites</button>}
             </div>
             </>
     )

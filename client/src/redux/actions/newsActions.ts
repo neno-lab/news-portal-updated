@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { ADD_FAVORITES, AppActions, ARTICLE_NEWS_SUCCESS, CATEGORY_NEWS_SUCCESS, NEWS_LOAD_SUCCESS} from './actionTypes';
+import { AppActions, ARTICLE_NEWS_SUCCESS, CATEGORY_NEWS_SUCCESS, NEWS_LOAD_SUCCESS} from './actionTypes';
 import client from '../../api/client';
 
 export const loadNews=()=>async (dispatch: Dispatch<AppActions>)=>{
@@ -37,16 +37,4 @@ export const addArticle=(article:any)=>(dispatch: Dispatch<AppActions>)=>{
     } catch (err) {
         throw err;
     }
-};
-
-export const addFavorites=(favorites:any)=>(dispatch: Dispatch<AppActions>)=>{
-    try {
-        dispatch({
-            type: ADD_FAVORITES,
-            favoritesNews: favorites
-        })
-    } catch (err) {
-        throw err;
-    }
-
 };
