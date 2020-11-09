@@ -92,6 +92,8 @@ class Home extends React.Component<Props, HomeState> {
 
         else {
             if(this.state.selectedCategory==='hottest' || this.state.selectedCategory!=='hottest'){
+                console.log('nesto', this.props.news);
+                console.log('nesto2', this.props.articleNews);
                 let filteredNews = (this.props.news as Array<string>).filter((filter:any)=>{ // It gives me an error when you try to press back to 'localhost:3000'! 'TypeError: this.props.news.filter is not a function'
                     return filter.title.toLowerCase().includes(this.state.search.toLowerCase()); // search by title
                 });
@@ -127,7 +129,7 @@ class Home extends React.Component<Props, HomeState> {
                             <div className='favorites-wrapper'> {
                                 this.state.favorites.map((it:any)=>(
                                 <div key={Math.random().toString(36).substr(2,9)}>
-                                    <div className='article-wrapper'><Article article={it} deleteBtn={true}  removeFavorites={this.removeFavorites}/></div>
+                                    <div className='article-wrapper'><Article article={it} deleteBtn={true} linkTitle={true} removeFavorites={this.removeFavorites}/></div>
                                 </div>  
                                 ))
                             }</div>

@@ -14,7 +14,7 @@ export interface CategoryNews{
 
 export interface ArticleNews{
     type: typeof ARTICLE_NEWS_SUCCESS;
-    articleNews: any;
+    articleNews: [];
 }
 
 export type NewsActionTypes = NewsSuccess | CategoryNews | ArticleNews;

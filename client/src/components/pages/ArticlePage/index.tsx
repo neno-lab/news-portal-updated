@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import { AppState } from '../../../redux/configureStore';
 import './index.scss';
 import history from "../../../history";
+import {Link} from 'react-router-dom';
 
 interface ArticlePageProps{
 }
@@ -18,7 +19,8 @@ class ArticlePage extends React.Component<Props, ArticlePageState> {
         return (
         <>
             <div className='main-div'>
-                <div className='title' onClick={()=>history.push('/')}>{news.title}</div> {/* It gives me an error! */} {/* TypeError: this.props.news.filter is not a function */}
+                <Link to='/'>Back</Link>
+                <div className='title'>{news.title}</div> {/* It gives me an error! */} {/* TypeError: this.props.news.filter is not a function */}
                 <div>
                     <img src={news.urlToImage} alt="article"/>
                     <span>

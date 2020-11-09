@@ -3,12 +3,10 @@ import history from "../../history";
 import './index.scss';
 
 
-const Article = ({article, setFavorites, addArticle, deleteBtn, removeFavorites}:any) => {
+const Article = ({article, setFavorites, addArticle, deleteBtn, linkTitle, removeFavorites}:any) => {
     return (
         <>
-            <div className='title-wrapper' onClick={() => {history.push("/article");
-                                            addArticle(article)
-        }}>{article.title}</div>
+            {linkTitle ? <div className='no-title-wrapper'>{article.title}</div> : <div className='title-wrapper' onClick={() => {history.push("/article");addArticle(article)}}>{article.title}</div>}
             <small>{article.publishedAt.split('T')[0]}</small>
             <div>
                 <img style={{width: "100%", height: "100%", marginTop: "10px", marginBottom: "10px"}} src={article.urlToImage} alt="article"/>
