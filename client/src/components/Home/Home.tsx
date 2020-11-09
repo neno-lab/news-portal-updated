@@ -92,7 +92,7 @@ class Home extends React.Component<Props, HomeState> {
 
         else {
             if(this.state.selectedCategory==='hottest' || this.state.selectedCategory!=='hottest'){
-                let filteredNews = (this.props.news as Array<string>).filter((filter:any)=>{ // It gives me an error! 'TypeError: this.props.news.filter is not a function'
+                let filteredNews = (this.props.news as Array<string>).filter((filter:any)=>{ // It gives me an error when you try to press back to 'localhost:3000'! 'TypeError: this.props.news.filter is not a function'
                     return filter.title.toLowerCase().includes(this.state.search.toLowerCase()); // search by title
                 });
                 return(
